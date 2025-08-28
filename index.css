@@ -1,4 +1,4 @@
-/*setting all to default*/
+/*--------------------- setting all to default  ---------------------*/
 *{
 margin: 0;
     padding: 0;
@@ -8,12 +8,13 @@ body{
     background-color: #ffffff;
     margin:0;
 }
-/* 1.header section */
+/*----------------- 1.header section ---------------*/
+
 .head-nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:10px 0px;
+    padding:10px 0px 0px 5px;
 }
 #circle1{
     background-color:rgb(255, 255, 0);
@@ -24,12 +25,18 @@ body{
     display: inline-block;
 }
 #fh1{
-    font-size: 25px;
+    font-size: 30px;
+}
+#fh2{
+    font-size: 70px;
+    padding-bottom:20px;
 }
 #span1{
     font-size: 15px;
 }
-
+.navbar{
+    margin:2px;
+}
 .navbar ul{
  list-style-type:none;
  display: flex;
@@ -43,10 +50,44 @@ body{
     color: grey;
     display:block;
 }
+/*-------------header section----------------- */
 
+/*--------------2. about me section --------------*/
+.about-container{
+    display:flex;
+    margin: 50px 0px 0px 80px;
+    padding:50px 50px;
+    justify-content:center; 
+    align-items: center;
+    gap:50px;
+}
+.profile-img{
+    height:300px;
+    width: 300px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.about-text{
+    max-width:400px;
+}
+@media(max-width:768px){
+.about-container{
+    display: flex;
+    flex-direction: column; 
+    margin-left: 80px;
+    gap:20px;   
+}
+.profile-img{
+    width:200px;
+    height:200px;
 
-/*header section */
-
-
-
-/*2. about me section */
+}
+}
+/*--------------2. about me section --------------*/
+/* -------------3. Footer section------------------*/
+footer{
+    display:block;
+    clear:both;
+    background-color: aquamarine;
+    padding: 0px;
+}
