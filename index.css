@@ -14,20 +14,23 @@ body {
 /*----------------- 1. Header Section ---------------*/
 #mh1 {
   font-size: 60px;
+  margin-bottom:10px;
 }
 
 #headspan1 {
   color: #1387c1;
+  font-weight: bold;
 }
 
 .navbar {
   margin: 2px;
   padding: 5px;
+  background-color: #0d1b2a
 }
 
 #hr {
   border: none;
-  height: 1px;
+  height: 1.3px;
   background-color: rgb(29, 48, 57);
 }
 
@@ -86,7 +89,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 9px; /* adds natural spacing between h1, h2, and p */
+  gap: 7px; /* adds natural spacing between h1, h2, and p */
 }
 
 .about-text h1 {
@@ -122,9 +125,75 @@ body {
   }
 }
 
-/*--------------3. Footer Section --------------*/
-footer {
-  display: block;
-  clear: both;
-  padding: 0px;
+.about-btn{
+    margin-top: 20px;
+    display: flex;
+    gap:20px;
 }
+.btn{
+    text-decoration: none;
+    padding: 9px 17px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    min-width: 150px;
+    text-align: center;
+}
+.btn-main{
+    background-color: #1387c1;
+    color:white;
+    box-shadow: 0 4px 10px rgba(19,135,193,0.3);
+}
+.btn-main:hover{
+    background-color: #0f6a99;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(19,135,193,0.2);
+}
+.btn-alt{
+    border: 1.5px solid #1387c1;
+    color:#1387c1;
+}
+.btn-alt:hover{
+    border: 1.5px solid #fbfeff;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(19,135,193,0.2);
+}
+/*--------------3. Footer Section --------------*/
+.footer{
+    background-color: #1c3653;
+    text-align: center;
+}
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.footer-icons a{
+    text-decoration: none;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    font-size: 1.2rem;
+}
+.footer-container p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+.fa-brands.fa-linkedin{
+    color: #0A66C2;
+}
+.fa-brands.fa-linkedin:hover{
+    color: #66b3ff;
+}
+.fa-brands.fa-github{
+  color:  #181717;
+
+}.fa-brands.fa-github:hover{
+  color:  #2c2c2c;
+}
+
