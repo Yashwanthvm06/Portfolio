@@ -9,6 +9,7 @@ body {
   background-color: #101a20;
   color: white;
   margin: 0;
+    
 }
 
 /*----------------- 1. Header Section ---------------*/
@@ -16,6 +17,7 @@ body {
   font-size: 60px;
   margin-bottom:10px;
 }
+
 
 #headspan1 {
   color: #1387c1;
@@ -78,7 +80,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 70px 80px;
+  padding: 80px 80px;
   gap: 125px;
   height: 500px;
 }
@@ -171,6 +173,7 @@ body {
 .footer{
     background-color: #101a20;
     text-align: center;
+    margin-top:32px;
 }
 .footer-icons {
     display: flex;
@@ -206,6 +209,7 @@ body {
 }
 
 /*contact's style */
+
 .contact{
   padding:40px 0px 40px 0px;
 }
@@ -216,34 +220,27 @@ body {
 }
 #cp1{
   text-align: center;
+  margin-bottom: 32px;
 }
-.contact-box{
-background-color: #101a20;
-margin: 0px auto;
-padding: 0px 12px;
+.contact-box {
+  background-color: #101a20;
+  margin: 0 auto;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: center;  
+  align-items: flex-start;
+  gap: 30px;                 
+  max-width: 1100px;         
 }
 .contact-form{
 background-color: #101a20;
 padding:-48px -24px 0px -24px;
-display: flex;
-padding:20px;
-justify-content: space-between;
-gap:50px;
-
 }
-.body-of-form{
+.body-of-contact,
+.body-of-form {
   background-color: #141f26;
-  margin: 30px 0px 0px 0px;
-  padding: 48px;
-  max-width: 500px;
-  border-radius: 30px;
-}
-.body-of-contact{
-  background-color: #141f26;
-  margin: 30px 0px 0px 0px;
-  padding: 48px;
-  max-width: 500px;
-  color:rgb(255, 255, 255);
+  padding: 40px;
+  flex: 1;             
   border-radius: 30px;
 }
 .c2h3{
@@ -273,17 +270,17 @@ margin-bottom: 32px;
 
 .fa-solid.fa-location-dot.fa-2x{
  color:red;
- margin-top:35px;
+ margin-top:30px;
  display: flex;
 }
 .fa-solid.fa-envelope.fa-2x{
   color:grey;
-  margin-top: 4px;
+  margin-top: 10px;
   display: flex;
 }
 .fa-solid.fa-phone.fa-2x{
    color:green;
-   margin-top: 7px;
+   margin-top: 13px;
    display: flex;
 }
 .fa-solid.fa-phone.fa-2x:hover{
@@ -295,4 +292,60 @@ color:white;
 .fa-solid.fa-envelope.fa-2x:hover{
 color:white;
 }
+/*styles for forms in contact.html*/
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #101a20;
+  color: white;
+  font-size: 16px;
+  resize: vertical;
+}
+/* ----------- Word Loop Animation ----------- */
+/* -------- Word Loop Animation -------- */
+#mh2 {
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 2rem;
+}
 
+.words {
+  position: relative;
+  height: 2rem;           /* match line-height */
+  overflow: hidden;
+  display: inline-block;
+  min-width: 20ch;    
+  color:#3cb4ff     /* prevents layout shift */
+}
+
+.words > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  animation: fadeWords 9s infinite;
+  white-space: nowrap;
+}
+
+.words > span:nth-child(1) { animation-delay: 0s; }
+.words > span:nth-child(2) { animation-delay: 3s; }
+.words > span:nth-child(3) { animation-delay: 6s; }
+
+@keyframes fadeWords {
+  0%   { opacity: 0; transform: translateY(100%); }
+  10%  { opacity: 1; transform: translateY(0); }
+  25%  { opacity: 1; transform: translateY(0); }
+  35%  { opacity: 0; transform: translateY(-100%); }
+  100% { opacity: 0; }
+}

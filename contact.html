@@ -6,6 +6,7 @@
     <title>Yashwanth's Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://kit.fontawesome.com/fe88af034f.js" crossorigin="anonymous"></script>
+    <script src="contact.js"></script>
 </head>
 <body>
     <!-- header element--> 
@@ -30,9 +31,6 @@
         <p id="cp1">If you like to conncet or work with me can contact with me by filling the form in below .</p>
     </div>
    <div class="contact-box">
-      <div class="contact-form">
-        
-        
         <div class="body-of-contact">
           <h3 class="c2h3">Contact Info</h3>
           <p class="c1p1">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
@@ -71,18 +69,25 @@
         
         
         <div class="body-of-form">
-          <h3 class="c2h3">Get In Touch</h3>
-          <p class="c1p1">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis<p>
-        
-        </div>
+  <h3 class="c2h3">Get In Touch</h3>
+  <p class="c1p1">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+
+  <form id="contact-form" onsubmit="sendEmail(event)">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" name="subject" placeholder="Subject" required>
+  <textarea name="message" placeholder="Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+</div>
+
      
      
       </div>
-   </div>
 </section>
 
 <!--footer element-->
-<hr id="hr">
 <footer class="footer">
   <hr id="hr">
   <div class="footer-container">
