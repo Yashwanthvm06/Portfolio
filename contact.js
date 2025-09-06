@@ -1,11 +1,9 @@
 (function() {
   emailjs.init("jcLa6tg5ysvXzk6ze");
 })();
-
 function sendEmail(e) {
   e.preventDefault();
-
-  emailjs.sendForm('service_8zl41gg', 'emplate_w4tqmya', e.target)
+  emailjs.sendForm('service_8zl41gg', 'template_w4tqmya', e.target)
     .then(() => {
       alert('✅ Message sent successfully!');
     }, (error) => {
