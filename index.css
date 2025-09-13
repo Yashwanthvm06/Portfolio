@@ -202,10 +202,10 @@ body {
     color: #66b3ff;
 }
 .fa-brands.fa-github{
-  color:  #181717;
+  color:  #5c5656;
 
 }.fa-brands.fa-github:hover{
-  color:  #2c2c2c;
+  color:  #e0e0e0ad;
 }
 
 /*contact's style */
@@ -377,4 +377,32 @@ button:hover {
   25%  { opacity: 1; transform: translateY(0); }
   35%  { opacity: 0; transform: translateY(-100%); }
   100% { opacity: 0; }
+}
+
+/* -------- about me styles -------- */
+.first-header{
+  text-align: center;
+  margin:auto;
+}
+#ah1{
+  font-size: 3.0rem;
+  margin-top:55px;
+  margin-bottom: 20px;
+}
+#ap1{
+  text-align: center;
+  color:#a9a9a9;
+  margin-bottom:7px;
+  display: block;
+}
+.about-section{
+  margin-top:48px;
+  padding:0px 80px 0px 80px;
+}
+.about-section h1{
+margin-top:10px;
+}
+.about-section span{
+  font-size:x-small;
+  font-display: bold;
 }
