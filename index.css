@@ -448,7 +448,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   column-gap: 50px;
-  row-gap: 30px;
+  row-gap: 50px;
   padding: 30px 60px;
   flex-wrap: wrap;
 }
@@ -470,7 +470,9 @@ button:hover {
 .skills:hover{
   border:0.25px solid rgb(28, 209, 230);
   cursor: pointer;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+   box-shadow: 0 6px 14px rgba(110, 183, 220, 0.2);
+  transition: all 0.5s ease;
 }
 .skills h3{
   text-align: left;
@@ -499,5 +501,84 @@ button:hover {
 .fa-brands.fa-java{
   font-size: 30px; 
   margin-top:15px;
+}
+
+/*-------Projects.html page css-------*/
+.project-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Project image */
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05); /* zoom effect */
+}
+
+/* Overlay (hidden by default) */
+.project-overlay {
+  position: absolute;
+  inset: 0; /* shorthand for top, right, bottom, left: 0 */
+  background: rgba(20, 31, 38, 0.9); /* dark transparent overlay */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding: 20px;
+  text-align: center;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* Title */
+.project-overlay h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #1387c1;
+}
+
+/* Description */
+.project-overlay p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  color: #e0e0e0;
+}
+
+/* Tech stack pills */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tech-stack span {
+  background-color: #25343d;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
 }
 
