@@ -83,7 +83,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 100px;
+  padding: 0px 100px;
   gap: 156.25px;
   height: 625px;
 }
@@ -175,7 +175,7 @@ body {
 .footer{
     background-color: #101a20;
     text-align: center;
-    margin-top:40px;
+    margin-top:0px;
 }
 .footer-icons {
     display: flex;
@@ -521,26 +521,86 @@ button:hover {
 }
 .projects-header{
   margin-bottom:50px;
+  font-size: 50px;
+  text-align: center;
 }
-.projects-container{
+.projects-grid{
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 62.5px;
   row-gap: 62.5px;
   padding: 37.5px 75px;
-  flex-wrap: wrap;
 }
 .project-card{
-  background-color: #141f26;
   max-width: 375px;
+  position: relative;
+  overflow: hidden;
   min-height:212.5px;
   border-radius: 25px;
   border:0.3125px solid #384249;
 }
-.pp{
-  margin-bottom: 12.5px;
+.project-card:nth-child(1) {
+  background: url("image copy.png") center/cover no-repeat;
 }
-.pp,.ph3{
+
+.project-card:nth-child(2) {
+  background: url("image.png") center/cover no-repeat;
+}
+
+.project-card:nth-child(3) {
+  background: url("Yashwanth\ v\ m\ resume\ phott.png") center/cover no-repeat;
+}
+.project-card::before{
+  content: "";
+  background:inherit; 
+  position: absolute;
+  inset: 0;     
+  filter:blur(0px);
+  border-radius: 25px;
+  z-index:0;
+  transition: opacity 0.3s ease;
+} 
+.project-card:hover::before{
+  filter: blur(5px);
+}
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 11, 0.6);
+  opacity: 0; /* hidden initially */
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none; /* prevents blocking text */
+}
+
+.project-card:hover::after {
+  opacity: 1; /* fade overlay in */
+}
+
+.project-card:hover{
+  border:0.3125px solid rgb(28, 209, 230);
+  cursor: pointer;
+  transform: translateY(-2.5px);
+   box-shadow: 0 7.5px 17.5px rgba(110, 183, 220, 0.2);
+  transition: all 0.5s ease;
+}
+.project-card h3,
+.project-card p,
+.project-card .tech-stack span {
+  z-index: 2; 
+  color:white;
+  text-align: center;
+  position: relative;
   opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.project-card:hover h3,
+.project-card:hover p,
+.project-card:hover .tech-stack span {
+  opacity: 1;
+  z-index: 2;
+  color:white;
 }
